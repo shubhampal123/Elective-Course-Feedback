@@ -1,0 +1,27 @@
+{% extends 'elective/base.html' %}
+
+{% block content %}
+<div>
+    <p><span>Course : {{course.name}}</span></p>
+    <p><span>Teaacher : {{course.teacher}}</span></p>
+    <p><span>Students Enrolled : {{course.count}}</span></p>
+    <p><span>Marks Leniency : {{course.marks}}</span></p>
+    <p><span>Attendence Leniency : {{course.attendence}}</span></p>
+    
+</div>
+<br>
+<br>
+    <p><span><strong>Reviews</strong></span></p>
+<br>
+<br>
+{% for feedback in feedbacks %}
+    <div>
+        <p>&quot;{{feedback.review|linebreaksbr}}&quot;</p>
+        
+    </div>
+    <br>
+    <br>
+{% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'elective/base.html' %}
+
+{% block content %}
+
+        
+
+        <div>
+            <p></p>
+            <h2><a href="{% url 'take_feedback' %}">Give Feedback</a></h2>
+            
+        </div>
+
+        <div>
+            <p></p>
+            <h2><a href="{% url 'sort_popularity' %}">Sort Courses Based On Popularity </a></h2>
+            
+        </div>
+
+        <div>
+            <p></p>
+            <h2><a href="{% url 'sort_quality' %}">Sort Courses Based On Teaching Quality </a></h2>
+            
+        </div>
+
+        <div>
+            <p></p>
+            <h2><a href="{% url 'sort_marks' %}">Sort Courses Based On Leniency In Marks </a></h2>
+            
+        </div>
+
+        <div>
+            <p></p>
+            <h2><a href="{% url 'sort_attendence' %}">Sort Courses Based On Leniency In Attendence</a></h2>
+            
+        </div>
+
+
+
+{% endblock %}

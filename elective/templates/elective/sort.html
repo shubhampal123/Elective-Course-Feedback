@@ -1,0 +1,29 @@
+{% extends 'elective/base.html' %}
+
+{% block content %}
+
+<table>
+<tr>
+    <th>Course</th>
+    <th>Teacher</th>
+    <th>Students Enrolled</th>
+    <th>Marks Leniency</th>
+    <th>Attendence Leniency</th>
+    <th>Teaching Quality</th>
+
+</tr>
+{% for course in courses %}
+    <div>
+        <tr>
+        <td> <a href="{% url 'show_review' pk=course.pk %}">{{ course.name}}</a></td>
+        <td> {{course.teacher}}</td>
+        <td> {{course.count}}</td>
+        <td> {{course.marks}}</td>
+        <td> {{course.attendence}}</td>
+        <td> {{course.quality}}</td>
+        </tr>
+    </div>
+{% endfor %}
+</table>
+
+{% endblock %}
